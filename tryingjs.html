@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<!--<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>-->
+	<link type="text/css" rel="stylesheet" href="loading/waitMe.css">
+	<script type="text/javascript" src="js/new.js"></script>
+	<script type="text/javascript" src="js/jqr.js"></script>
+	<title>trying js</title>
+	<style>
+		body.loading{
+		        overflow: hidden;   
+		    }
+		body.loading .overlay{
+		        display: block;
+		    }
+		.overlay{
+		    display: none;
+		    position: fixed;
+		    width: 100%;
+		    height: 100%;
+		    top: 0;
+		    left: 0;
+		    z-index: 999;
+		    background: rgba(255,255,255,0.8) url("loading.gif") center no-repeat;
+		}
+	</style>
+</head>
+<body>
+	<div class="container mt-5">
+		<h1>My First JavaScript</h1>
+		<button id="mybtn" class="btn btn-primary" onclick="changebutton()" value="Submit">Click Me!</button>
+		<button id="demo" class="btn btn-primary" onclick="datesh()" value="Date">Today's Date!</button>
+		<p id="para">
+			This is a paragraph. We need to hide this to test our button.
+		</p>
+		<button id="parabtn" class="btn btn-primary" onclick="hide_para()" value="Para">Hide Paragraph</button>
+		<img src="onbulb.png" id="bulb" width="100px" height="100px">
+		<button id="bulbbtn" class="btn btn-primary" onclick="hide_bulb()" value="Bulb">Hide bulb</button>
+		<br>
+		<br>
+		<form>
+			<label>Value1:</label>
+			<input type="text" id="v1">
+			<br>
+			<label>Value2:</label>
+			<input type="text" id="v2">
+			<br>
+			<label>Value3:</label>
+			<input type="text" id="v3">
+		</form>
+		<button id="calc" class="btn btn-primary" onclick="calc()">Add</button>
+		<p id="calcp">Result:</p>
+		<br>
+		<p id="spara">Your only chance of survival, if you are sincerely smitten, lies in hiding this fact from the woman you love, of feigning a casual detachment under all circumstances. What sadness there is in this simple observation! What an accusation against man! However, it had never occurred to me to contest this law, nor to imagine disobeying it: love makes you weak, and the weaker of the two is oppressed, tortured and finally killed by the other, who in his or her turn oppresses, tortures and kills without having evil intentions, without even getting pleasure from it, with complete indifference; that’s what men, normally, call love.</p>
+		<div class="alert alert-danger" role="alert" style="display: none;" id="x">
+			Word is not found!!
+		</div>
+		<div class="alert alert-success" role="alert" style="display: none;" id="v">
+			Word is found!!
+		</div>
+		<form>
+			<input type="text" id="sbar">
+		</form>
+		<button class="btn btn-primary" id="sbtn">Search</button>
+	</div>
+	<div class="container" style="margin-top: 10px;">
+		<div>
+			<textarea id="ta" class="form-control" rows="3">
+				
+			</textarea>
+		</div>
+		<div style="margin-bottom: 10px;">
+			<span id="pta"></span>
+		</div>
+	</div>
+	<div class="container">
+		<button class="btn btn-primary" id="spin">Tap to Spin</button>
+	</div>
+	<div class="overlay" id="loader"></div>
+</body>
+</html>
